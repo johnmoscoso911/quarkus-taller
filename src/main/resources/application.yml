@@ -1,0 +1,7 @@
+greeting:
+  message: "hello"
+
+quarkus:
+  mongodb:
+    database: sample
+    connection-string: mongodb://super:password@localhost:27017/?readPreference=primary&appname=Cool&ssl=false
