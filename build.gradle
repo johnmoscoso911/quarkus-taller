@@ -23,6 +23,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'
+    testImplementation 'io.quarkus:quarkus-junit5-mockito'
 }
 
 group 'org.x'
