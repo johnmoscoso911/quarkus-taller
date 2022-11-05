@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.x.model.Person;
 import org.x.service.PersonService;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -21,6 +22,7 @@ public class PersonController {
     PersonService service;
 
     @POST
+    @RolesAllowed({"write"})
     public Uni<Response> create(Person person) {
         return service.create(person)
                 .onItem()
@@ -32,6 +34,7 @@ public class PersonController {
     }
 
     @DELETE
+    @RolesAllowed({"admin"})
     @Path("/{id}")
     public Uni<Response> delete(@PathParam("id") String id) {
         return service.delete(id)

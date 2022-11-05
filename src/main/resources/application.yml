@@ -5,3 +5,10 @@ quarkus:
   mongodb:
     database: sample
     connection-string: mongodb://super:password@localhost:27017/?readPreference=primary&appname=Cool&ssl=false
+
+mp:
+  jwt:
+    verify:
+      issuer: insane-developer
+      publickey:
+        location: publickey.pem
